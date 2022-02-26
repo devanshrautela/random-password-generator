@@ -25,7 +25,7 @@ def Generator():
         password = password+random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits + string.punctuation)
     pass_str.set(password)
 
-Button(root, text = "GENERATE PASSWORD" , command = Generator ).pack(pady= 5)
+Button(root, text = "GENERATE PASSWORD", command = Generator).pack(pady= 5)
 
 Entry(root , textvariable = pass_str).pack()
 
