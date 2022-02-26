@@ -31,6 +31,9 @@ Entry(root , textvariable = pass_str).pack()
 
 def Copy_password():
     pyperclip.copy(pass_str.get())
+    with open("pass.txt","a") as p:
+        print(pass_str.get(),file=p)
+        p.close()   
 
 Button(root, text = 'COPY TO CLIPBOARD', command = Copy_password).pack(pady=5)
 
